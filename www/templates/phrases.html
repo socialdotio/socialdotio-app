@@ -1,0 +1,17 @@
+<ion-view view-title="Phrases">
+    <ion-content ng-controller="phrasesCtrl">
+        <div class="padding" style="margin-top:2em" >
+            <ion-list>
+                <ion-item ng-repeat="phrase in phrases" class="card">
+                    <div class="item item-text-wrap stable-bg">
+                        <h2>{{ phrase.title }}</h2>
+                        <span style="float:right;margin:1rem"><i class="ion-close button button-assertive"></i></span>
+                    </div>
+                </ion-item>
+                <ion-item class="card">
+                    <label class="item item-input item-md-label" placeholder="(a new phrase)" highlight-color="dark" type="text"><input type="text"><span class="input-label assertive">(a new phrase)</span><!-- <div class="highlight highlight-balanced"></div> --></label>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

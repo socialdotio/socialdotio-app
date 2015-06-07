@@ -1,0 +1,17 @@
+<ion-view view-title="Recents">
+    <ion-content ng-controller="recentsCtrl">
+            <div class="padding" style="margin-top:2rem">
+              <button class="button" ng-click="getRecents()">Show Recent SMS</button>
+              <div class="list" ng-show="recentSMS">
+                <div class="card" ng-repeat="contact in phoneContacts" ng-if="contact.phoneNumbers" >
+                  <div class="item item-divider">
+                    {{ contact.name.formatted }}
+                  </div>
+                  <div class="item item-text-wrap">
+                    <!-- insert here -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<ion-view view-title="Contacts">
+    <ion-content ng-controller="contactsCtrl">
+        <div class="padding" style="margin-top:2em" >
+            <button class="button" ng-click="getContacts()">Get My Contacts</button>
+            <div class="list" ng-show="phoneContacts">
+                <div class="card" ng-repeat="contact in phoneContacts" ng-if="contact.phoneNumbers">
+                    <div class="item item-divider">
+                        {{ contact.name.formatted }}
+                    </div>
+                    <div class="item item-text-wrap">
+                        <p><strong>Phone(s)</strong></p>
+                        <div ng-repeat="number in contact.phoneNumbers">
+                            <p>{{ number.value }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
